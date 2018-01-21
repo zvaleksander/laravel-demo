@@ -37,7 +37,7 @@ class ParametrosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -48,7 +48,9 @@ class ParametrosController extends Controller
      */
     public function show($id)
     {
-        //
+        $instance = Parametro::find($id);
+
+        return $instance;
     }
 
     /**
@@ -71,7 +73,11 @@ class ParametrosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $instance = Parametro::find($id);
+        $instance->descripcion = $request->descripcion;
+        $instance->estado = $request->estado;
+
+        return $instance;
     }
 
     /**

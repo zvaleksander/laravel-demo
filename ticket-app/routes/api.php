@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/dominios', 'DominiosController@index');
+
 Route::get('/parametros', 'ParametrosController@index');
+Route::get('/parametros/{id}', 'ParametrosController@show');
